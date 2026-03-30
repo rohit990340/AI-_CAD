@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --cyber-bg: #0a0a0a;
+  --cyber-card: #141414;
+  --cyber-cyan: #3b82f6;
+  --cyber-magenta: #8b5cf6;
+  --cyber-lime: #10b981;
+  --cyber-border: #262626;
+}
+
+@theme {
+  --color-cyber-bg: var(--cyber-bg);
+  --color-cyber-card: var(--cyber-card);
+  --color-cyber-cyan: var(--cyber-cyan);
+  --color-cyber-magenta: var(--cyber-magenta);
+  --color-cyber-lime: var(--cyber-lime);
+  --color-cyber-border: var(--cyber-border);
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-gray-200 overflow-hidden font-sans antialiased;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-cyber-card border border-cyber-border rounded-lg relative overflow-hidden shadow-md;
+  }
+
+  .cyber-glow-cyan {
+    /* Removed glow for a cleaner look */
+  }
+
+  .cyber-glow-magenta {
+    /* Removed glow for a cleaner look */
+  }
+
+  .cyber-border-glow {
+    @apply border-cyber-cyan/40;
+  }
+
+  .scanline {
+    display: none; /* Removed scanline for a cleaner look */
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(var(--cyber-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--cyber-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "AI CAD Flow",
+  "description": "An integrated CAD design and analysis platform powered by AI, featuring 3D visualization, automated geometry processing, and detailed report generation.",
+  "requestFramePermissions": []
+}
